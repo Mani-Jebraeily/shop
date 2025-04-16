@@ -3,21 +3,27 @@ import { Link } from 'react-router-dom'
 import{TbListDetails} from 'react-icons/tb'
 import { TbShoppingBagCheck } from 'react-icons/tb';
 import { shortenText } from '../helper/helper';
+import { Loader } from 'rsuite';
 
 function Card({data}) {
     const {id,image,title,price}=data;
   return (
-    <div className='w-67.5 m-2.5 p-5 flex flex-col items-start justify-end bg-[#fff] border-[2px] border-dashed border-[#e2e2e2] rounded-[20px]'> 
-        <img src={image} alt={title} className='size-57.5  p-5 mb-5 bg-[#fff] m-auto' />
+    <div className='w-67.5  m-2.5  p-5  gap-1 flex flex-col items-center justify-end  bg-[#fff] border-[2px] border-dashed border-[#e2e2e2] rounded-[20px]'> 
+        <img src={image} alt={title} className='size-57.5  p-5 mb-5 bg-[#fff]' />
         <h3 className='text-[#fe5d42] text-[1.1rem] '>{shortenText(title)}</h3>
         <p className='text-[#666] text-[0.9rem] font-semibold m-[10px_0px_30px]'>{price} $</p>
-        <div className='w-[100%] item-center flex justify-between  '>
-            <Link to={`/Products/${id}`} className='text-[1.5rem] text-[#fe5d42] h-6.5 cursor-pointer'>
-               <TbListDetails/>
-            </Link>
-          <div className='flex items-center'>action
+
+        <div className='w-[95%] h-12 items-center flex  justify-between'>
+            <div>
+              <Link to={`/Products/${id}`} className='text-[1.5rem] text-[#fe5d42] h-6.5 cursor-pointer'>
+                 <TbListDetails/>
+              </Link>
+            </div>
+          
+          <div className='flex items-center'>
+            {/* action */}
             {/* <span className='w-5 items-center m-[0px_10px]'></span> */}
-            <button className='bg-[#fe5d42] text-[#fff] border-none text-[1.7rem] size-8 leading-8 p-0.5 rounded-xs cursor-pointer'>
+            <button className='bg-[#fe5d42] text-[#fff] border-none text-[1.7rem] size-8 leading-8 p-0.5 rounded-lg cursor-pointer flex justify-center'>
                <TbShoppingBagCheck/>
             </button>
           </div>
