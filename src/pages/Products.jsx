@@ -4,6 +4,7 @@ import { useProducts } from '../context/ProductsContext'
 import Card from '../components/Card'
 import {BarLoader } from 'react-spinners'
 import { ImSearch } from 'react-icons/im'
+import { FaListUl } from 'react-icons/fa'
 
 function Products() {
   const products=useProducts()
@@ -11,6 +12,17 @@ function Products() {
 
   const searchHandeler=()=>{
     console.log("search")
+  }
+
+  const categoryHandeler=(event)=>{
+    const {tagName}=event.target
+    const category=event.target.innerText.toLowerCase()
+    console.log(category)
+    if(tagName!=="LI"){
+      return
+    }
+
+
   }
   return (
     <>
@@ -33,7 +45,19 @@ function Products() {
           </div>
         </div>
        
-        <div>side bar</div>
+        <div>
+            <div className='flex items-center'>
+              <FaListUl/>
+              <p>Categories</p>
+            </div>
+            <ul onClick={categoryHandeler}>
+              <li>All</li>
+              <li>Electronics</li>
+              <li>Jewelery</li>
+              <li>Men's Clothing</li>
+              <li className='flex flex-nowrap'>Women's Clothing</li>
+            </ul>
+        </div>
      </div>
     
     </>
