@@ -5,7 +5,7 @@ import Card from '../components/Card'
 import {BarLoader } from 'react-spinners'
 import { ImSearch } from 'react-icons/im'
 import { FaListUl } from 'react-icons/fa'
-import { searchProducts,filterProducts, createQueryObject } from '../helper/helper'
+import { searchProducts,filterProducts, createQueryObject, getInitialQuery } from '../helper/helper'
 import { useSearchParams } from 'react-router-dom'
 
 function Products() {
@@ -16,13 +16,17 @@ function Products() {
   const [query,setQuery]=useState([])
   const [searchParams,setSearchParams]=useSearchParams()
 
-
+console.log(query)
   useEffect(()=>{
     setDisplayed(products)
+
+    setQuery(getInitialQuery(searchParams))
   },[products])
 
   useEffect(()=>{
     setSearchParams(query)
+    setSearch(query.search || "")
+
    let finalProducts= searchProducts(products,query.search)
    finalProducts=filterProducts(finalProducts,query.category)
    setDisplayed(finalProducts)

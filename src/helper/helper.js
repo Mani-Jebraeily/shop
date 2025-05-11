@@ -23,7 +23,7 @@ const createQueryObject=(currentQuery,newQuery)=>{
     }
 
     if(newQuery.search===""){
-        const{category,...rest}=currentQuery
+        const{search,...rest}=currentQuery
         return rest
     }
 
@@ -31,4 +31,13 @@ const createQueryObject=(currentQuery,newQuery)=>{
 
 }
 
-export {shortenText,searchProducts,filterProducts,createQueryObject}
+const getInitialQuery=(searchParams)=>{
+        const query={}
+        const category=searchParams.get("category")
+        const search=searchParams.get("search")
+        if(category)query.category=category
+        if(search)query.search=search
+        return query
+}
+
+export {shortenText,searchProducts,filterProducts,createQueryObject,getInitialQuery}
