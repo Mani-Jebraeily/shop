@@ -3,10 +3,10 @@ import api from '../services/config'
 import { useProducts } from '../context/ProductsContext'
 import Card from '../components/Card'
 import {BarLoader } from 'react-spinners'
-import { ImSearch } from 'react-icons/im'
-import { FaListUl } from 'react-icons/fa'
 import { searchProducts,filterProducts, createQueryObject, getInitialQuery } from '../helper/helper'
 import { useSearchParams } from 'react-router-dom'
+import SearchBox from '../components/SearchBox'
+import SideBar from '../components/SideBar'
 
 function Products() {
   const products=useProducts()
@@ -33,25 +33,10 @@ console.log(query)
   //  console.log(query)
   },[query])
 
-  const searchHandeler=()=>{
-    setQuery((query)=>createQueryObject(query,{search}))
-  }
 
-  const categoryHandeler=(event)=>{
-    const {tagName}=event.target
-    const category=event.target.innerText.toLowerCase()
-    setQuery((query)=>createQueryObject(query,{category}))
-    if(tagName!=="LI"){
-      return
-    }
-  }
   return (
     <>
-    <div>
-      <input type="text" placeholder='Search...' value={search} onChange={(e)=>setSearch(e.target.value.toLowerCase().trim())}/>
-      <button className='bg-red-900 cursor-pointer' onClick={searchHandeler}><ImSearch/></button>
-    </div>
-
+    <SearchBox setSearch={setSearch} search={search} setQuery={setQuery}/>
      <div className='flex justify-between'> 
         <div className='w-[100%] flex flex-wrap justify-between justify -center items-center'> 
           {!displayed.length&&(
@@ -61,23 +46,9 @@ console.log(query)
           )}
           <div className='flex  flex-row flex-wrap  gap-y-5 gap-x-3 justify-around '>
             {displayed.map((p)=>(<Card key={p.id} data={p}/>))}
-             
           </div>
         </div>
-       
-        <div>
-            <div className='flex items-center'>
-              <FaListUl/>
-              <p>Categories</p>
-            </div>
-            <ul onClick={categoryHandeler} className='cursor-pointer'>
-              <li>All</li>
-              <li>Electronics</li>
-              <li>Jewelery</li>
-              <li>Men's Clothing</li>
-              <li className='flex flex-nowrap'>Women's Clothing</li>
-            </ul>
-        </div>
+        <SideBar setQuery={setQuery}/>
      </div>
     
     </>
