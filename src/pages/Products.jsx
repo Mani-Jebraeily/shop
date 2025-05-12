@@ -40,7 +40,7 @@ console.log(query)
      <div className='flex justify-between'> 
         <div className='w-[100%] flex flex-wrap justify-between justify -center items-center'> 
           {!displayed.length&&(
-            <div className='h-100 w-[100%] text-center mt -25 m-auto grid place-items-center '>
+            <div className='h-100 w-[100%] text-center  m-auto grid place-items-center '>
               <BarLoader />
              </div> 
           )}
@@ -48,7 +48,7 @@ console.log(query)
             {displayed.map((p)=>(<Card key={p.id} data={p}/>))}
           </div>
         </div>
-        <SideBar setQuery={setQuery}/>
+        <SideBar setQuery={setQuery} query={query}/>
      </div>
     
     </>
