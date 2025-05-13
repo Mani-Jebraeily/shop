@@ -16,7 +16,7 @@ function Products() {
   const [query,setQuery]=useState([])
   const [searchParams,setSearchParams]=useSearchParams()
 
-console.log(query)
+// console.log(query)
   useEffect(()=>{
     setDisplayed(products)
 
@@ -44,7 +44,7 @@ console.log(query)
               <BarLoader />
              </div> 
           )}
-          <div className='flex  flex-row flex-wrap  gap-y-5 gap-x-3 justify-around '>
+          <div className='flex  flex-row flex-wrap  gap-y-5 gap-x-3 justify -around justify-between'>
             {displayed.map((p)=>(<Card key={p.id} data={p}/>))}
           </div>
         </div>

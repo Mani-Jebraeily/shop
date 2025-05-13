@@ -21,5 +21,13 @@ const useProducts=()=>{
     return products
 }
 
+const useProductDetails=(id)=>{
+  const products= useContext(ProductContext)
+  const result=products.find((p)=>p.id===id)
+  return result
+
+
+}
+
 export default ProductsContext
-export {useProducts}
+export {useProducts,useProductDetails}
