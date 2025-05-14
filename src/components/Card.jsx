@@ -4,7 +4,6 @@ import{TbListDetails} from 'react-icons/tb'
 import { TbShoppingBagCheck } from 'react-icons/tb';
 import { MdDeleteOutline } from 'react-icons/md';
 import { producyQuantity, shortenText } from '../helper/helper';
-import { Loader } from 'rsuite';
 import { useCard } from '../context/CardProvider';
 
 function Card({data}) {
