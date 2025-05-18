@@ -1,5 +1,5 @@
 ># **Project Title**
- ##### Store simulation 
+  **Simulated Online Store**
 
 ># **Description**
 
