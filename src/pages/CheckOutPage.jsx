@@ -14,14 +14,14 @@ function CheckOutPage() {
   return (
     
     // <div className='flex justify-between items-start p-2.5 min-h-[1000px]'>
-    <div className={state.selectedItems.length===0? "w-[400px] m-auto":'flex justify-end flex-col-reverse md:flex-row md:justify-between items-center md:items-start p-2.5 min-h-[1000px]'}>
+    <div className={state.selectedItems.length===0? "w-50 md:w-[400px] m-[0_auto] ":'flex justify-end flex-col-reverse md:flex-row md:justify-between items-center md:items-start p-2.5 min-h-[1000px]'}>
       {state.selectedItems.length===0&& 
-        <div className='flex m-auto w-[100%]  flex-col '>
-          <img className='size-70 m-auto' src={basket} alt="empty basket image" />
-          <p className='p-[30px] m-auto' >Your Basket is Empty!!</p>
-          <Link className='w-100 h-20 text-[2rem] flex items-center justify-center bg-[#676368] p-[5px_10px] text-[#fff] rounded-xl ' to="/products">
+        <div className='flex m-[0_auto] w-50 md:w-[100%]  flex-col '>
+          <img className='size-30 md:size-70 m-[0_auto]' src={basket} alt="empty basket image" />
+          <p className='m-[20px_auto] md:p-[30px] ' >Your Basket is Empty!!</p>
+          <Link className='m-[0_auto] w-50 h-10 md:h-20 text-[1rem] flex items-center justify-center bg-[#676368] p-[5px_10px] text-[#fff] rounded-xl ' to="/products">
             <FaArrowLeft className='mr-2.5 text-[#fff]'/> 
-            <span className='text-[#fff]'>
+            <span className=' text-[#fff]'>
              Back to Shop
             </span>
           </Link>

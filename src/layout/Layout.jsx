@@ -20,7 +20,8 @@ function Layout({children}) {
     </header>
      {children}
     <footer className='text-center bg-[#fe5d42] p-5 m-2.5 mt-20 rounded-[10px] text-[#fff]'>
-        <p>Developed by Mani Jebraeily</p>
+      <p>Developed by <Link to="https://github.com/Mani-Jebraeily"><span className='text-[#5e5d63] text-[21px]'> Mani Jebraeily </span> </Link></p>
+        
     </footer>
     </>
   )
