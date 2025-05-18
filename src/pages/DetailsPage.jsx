@@ -24,7 +24,7 @@ function DetailsPage() {
           <span className='flex'> 
             <IoMdPricetag className='text-[#fe5d42] mr-2.5 mt-1'/> {productDetails.price} $
           </span>
-          <Link className='flex items-center bg-[#fe5d42] p-[5px_10px] text-[#fff] rounded-xl ' to="/products">
+          <Link className='flex items-center bg-[#fe5d42] p-[5px_10px] text-[#fff] rounded-xl ' to="/shop/products">
             <FaArrowLeft className='mr-2.5 text-[#fff]'/> 
             <span className='text-[#fff]'>
              Back to Shop
