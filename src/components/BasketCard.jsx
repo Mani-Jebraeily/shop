@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 function BasketCard({data,clickHandeler}) {
   return (
-    <div className='flex items-center justify-between border-[2px] border-dashed border-[#e2e2e2] rounded-[20px] mb-3 p-3 '>
+    <div className='w-75 sm:w-auto m-[0_auto] flex flex-col gap-3 sm:gap-0 sm:flex-row items-center  sm:justify-between border-[2px] border-dashed border-[#e2e2e2] rounded-[20px] mb-3 p-3 '>
         <Link to={`/Products/${data.id}`}>
             <img className='size-12.5 ' src={data.image} alt={data.title} />
         </Link>

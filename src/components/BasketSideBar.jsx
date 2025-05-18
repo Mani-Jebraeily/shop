@@ -7,7 +7,7 @@ function BasketSideBar({state,clickHandeler}) {
 console.log(state)
 
   return (
-    <div className='w-75 mr-7.5 border-[2px] border-dashed border-[#fe5d42] rounded-[30px] p-5 *:flex *:items-center *:text-[#fe5d42] mb-4'>
+    <div className='w-75 md:mr-7.5 border-[2px] border-dashed border-[#fe5d42] rounded-[30px] p-5 *:flex *:items-center *:text-[#fe5d42] mb-4'>
         <div>
             <TbChecklist className='text-[1.3rem] mr-[5px]'/>
             <p>Total:</p>

@@ -10,7 +10,6 @@ function Card({data}) {
     const {id,image,title,price}=data;
     const [state,dispatch]=useCard()
     const quantity=producyQuantity(state,id)
-    console.log(state)
     const clickHandeler=(type)=>{
       dispatch({type,payload:data})
     }

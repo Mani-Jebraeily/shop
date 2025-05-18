@@ -37,16 +37,21 @@ function Products() {
   return (
     <>
     <SearchBox setSearch={setSearch} search={search} setQuery={setQuery}/>
-     <div className='flex justify-between'> 
+     <div className='flex flex-col-reverse  justify-center lg:flex-row'> 
+
         <div className='w-[100%] flex flex-wrap justify-between justify -center items-center'> 
           {!displayed.length&&(
             <div className='h-100 w-[100%] text-center  m-auto grid place-items-center '>
               <BarLoader />
              </div> 
           )}
-          <div className='flex  flex-row flex-wrap  gap-y-5 gap-x-3 justify -around justify-between'>
+          <div className='m-auto sm:m-0'>
+          <div className='flex  flex-col sm:flex-row flex-wrap  gap-y-5 gap-x-3 justify-around '>
             {displayed.map((p)=>(<Card key={p.id} data={p}/>))}
           </div>
+
+          </div>
+         
         </div>
         <SideBar setQuery={setQuery} query={query}/>
      </div>
