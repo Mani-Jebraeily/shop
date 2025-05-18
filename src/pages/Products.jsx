@@ -1,5 +1,4 @@
 import React, { use, useEffect, useState } from 'react'
-import api from '../services/config'
 import { useProducts } from '../context/ProductsContext'
 import Card from '../components/Card'
 import {BarLoader } from 'react-spinners'
