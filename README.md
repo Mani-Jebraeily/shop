@@ -39,9 +39,7 @@ To get the frontend running locally:
 - `npm install` to install all req'd dependencies
 - `npm run dev` to start the local server (this project Vite)
 
-># **Demo**
 
-[**Click here to see demo**](https://mani-jebraeily.github.io/shop/)
 <br/>
 <br/>
 
