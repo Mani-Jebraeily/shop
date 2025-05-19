@@ -15,7 +15,7 @@ function App() {
         <ProductsContext>
            <Layout>
                 <Routes>
-                  <Route index element={<Navigate to="products" replace/>} />
+                  <Route index element={<Navigate to="shop/products" replace/>} />
                   <Route  path="shop/products" element={<Products/>}/>
                   <Route  path="shop/products/:id" element={<DetailsPage/>}/>
                   <Route  path="shop/checkout" element={<CheckOutPage/>}/>
