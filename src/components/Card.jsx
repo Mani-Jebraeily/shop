@@ -21,7 +21,7 @@ function Card({data}) {
 
         <div className='w-[95%] h-12 items-center flex  justify-between'>
             <div>
-              <Link to={`/shop/Products/${id}`} className='text-[1.5rem] text-[#fe5d42] h-6.5 cursor-pointer'>
+              <Link to={`/Products/${id}`} className='text-[1.5rem] text-[#fe5d42] h-6.5 cursor-pointer'>
                  <TbListDetails/>
               </Link>
             </div>

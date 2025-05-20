@@ -41,7 +41,7 @@ To get the frontend running locally:
 
 
 
-[**Click here to see demo**](https://mani-jebraeily.github.io/shop/products)
+[**Click here to see demo**](https://mani-jebraeily.github.io/shop)
 <br/>
 <br/>
 

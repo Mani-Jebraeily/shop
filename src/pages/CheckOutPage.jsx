@@ -19,7 +19,7 @@ function CheckOutPage() {
         <div className='flex m-[0_auto] w-50 md:w-[100%]  flex-col '>
           <img className='size-30 md:size-70 m-[0_auto]' src={basket} alt="empty basket image" />
           <p className='m-[20px_auto] md:p-[30px] ' >Your Basket is Empty!!</p>
-          <Link className='m-[0_auto] w-50 h-10 md:h-20 text-[1rem] flex items-center justify-center bg-[#676368] p-[5px_10px] text-[#fff] rounded-xl '  to="/shop/products">
+          <Link className='m-[0_auto] w-50 h-10 md:h-20 text-[1rem] flex items-center justify-center bg-[#676368] p-[5px_10px] text-[#fff] rounded-xl '  to="/products">
             <FaArrowLeft className='mr-2.5 text-[#fff]'/> 
             <span className=' text-[#fff]'>
              Back to Shop
