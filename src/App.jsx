@@ -15,10 +15,10 @@ function App() {
         <ProductsContext>
            <Layout>
                 <Routes>
-                  <Route index element={<Navigate to="shop/products" replace/>} />
-                  <Route  path="shop/products" element={<Products/>}/>
-                  <Route  path="shop/products/:id" element={<DetailsPage/>}/>
-                  <Route  path="shop/checkout" element={<CheckOutPage/>}/>
+                  <Route index element={<Navigate to="/products" replace/>} />
+                  <Route  path="/products" element={<Products/>}/>
+                  <Route  path="/products/:id" element={<DetailsPage/>}/>
+                  <Route  path="/checkout" element={<CheckOutPage/>}/>
                   <Route  path="*" element={<NotFoundPage/>}/>
                 </Routes>
            </Layout>
